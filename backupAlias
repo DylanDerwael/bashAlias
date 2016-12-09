@@ -46,4 +46,5 @@ extract() {
      fi 
 } 
 alias websiteget="wget --random-wait -r -p -e robots=off -U mozilla"
+clean-docker="docker ps -a | grep 'weeks ago' | awk '{print $1}' | xargs --no-run-if-empty docker rm"
 
